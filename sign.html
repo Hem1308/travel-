@@ -1,0 +1,31 @@
+<script>  
+function validateemail()  
+{  
+var x=document.myform.email.value;  
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+  return false;  
+  }  
+}  
+</script>
+
+<html>
+<head>
+<title> sigh up</title>
+<link rel="stylesheet"type="text/css" href="sign.css">
+</head>
+<body>
+<div class="login" align="center">
+<h1 align="center" style="background:url(source.gif)">Sign up</h1>
+<input type ="text"name="Username"placeholder="Username"/ >
+<input type="text"name="E-mail"placeholder="E-mail" /<form name="myform"  method="post" action="" onSubmit="return validateemail();" /FROM>
+
+<input type="Password"name="Password"placeholder="Password"/>
+<input type="Password"name="Password2"placeholder="Retype Password"/>
+<input type="Submit"name="Sign up-Bottom"value="Sign up"/> 
+</div>
+</body>
+<body>  
+</html>
